@@ -20,26 +20,41 @@ import EditarTarefa from './EditarTarefa';
 
 //A função abaixo é usada para criar o array contendo os dados iniciais da listagem de tarefas.
 function createData(
-  idTarefa: number,
-  tituloTarefa: string,
-  descricaoTarefa: string,
-  inicioTarefa: string,
-  fimTarefa: string,
-  statusTarefa: string,
-  recursoTarefa: string,
+  idTarefa,
+  tituloTarefa,
+  descricaoTarefa,
+  inicioTarefa,
+  fimTarefa,
+  statusTarefa,
+  recursoTarefa
 ) {
-  return { idTarefa, tituloTarefa, descricaoTarefa, inicioTarefa, fimTarefa, statusTarefa, recursoTarefa };
+  return {
+    idTarefa,
+    tituloTarefa,
+    descricaoTarefa,
+    inicioTarefa,
+    fimTarefa,
+    statusTarefa,
+    recursoTarefa
+  };
 }
 
 //Definição do array contendo os dados iniciais da listagem de tarefas
 const initialRows = [
-  createData(1, 'Tarefa 1', 'Descrição da Tarefa 1', '2022-01-01', '2022-01-02', 'Concluída', 'Recurso 1'),
-  createData(2, 'Tarefa 2', 'Descrição da Tarefa 2', '2022-01-03', '2022-01-04', 'Em Andamento', 'Recurso 2'),
-  createData(3, 'Tarefa 3', 'Descrição da Tarefa 3', '2022-01-04', '2022-01-05', 'Em Andamento', 'Recurso 3'),
-  createData(4, 'Tarefa 4', 'Descrição da Tarefa 4', '2022-01-05', '2022-01-06', 'Em Andamento', 'Recurso 4'),
-  createData(5, 'Tarefa 5', 'Descrição da Tarefa 5', '2022-01-06', '2022-01-07', 'Em Andamento', 'Recurso 5'),
-  createData(6, 'Tarefa 6', 'Descrição da Tarefa 6', '2022-01-07', '2022-01-08', 'Aguardando', 'Recurso 6'),
+  createData(1, 'Planejamento do Projeto', 'Definir escopo, cronograma e recursos para o projeto.', '2022-01-01', '2022-01-02', 'Concluída', 'Maria Silva'),
+  createData(2, 'Desenvolvimento do Backend', 'Implementar a lógica de negócios e APIs.', '2022-01-03', '2022-01-10', 'Em Andamento', 'João Santos'),
+  createData(3, 'Desenvolvimento do Frontend', 'Desenvolver a interface do usuário e integrar com o backend.', '2022-01-04', '2022-01-15', 'Em Andamento', 'Ana Oliveira'),
+  createData(4, 'Testes de Unidade', 'Criar e executar testes de unidade para garantir a qualidade do código.', '2022-01-05', '2022-01-12', 'Em Andamento', 'Carlos Souza'),
+  createData(5, 'Testes de Integração', 'Testar a integração entre diferentes módulos do sistema.', '2022-01-06', '2022-01-14', 'Em Andamento', 'Fernanda Lima'),
+  createData(6, 'Deploy Inicial', 'Realizar o deploy inicial do sistema no ambiente de teste.', '2022-01-07', '2022-01-08', 'Aguardando', 'Ricardo Pereira'),
+  createData(7, 'Feedback de Usuários', 'Coletar feedback de usuários para identificar melhorias.', '2022-01-09', '2022-01-16', 'Planejada', 'Mariana Almeida'),
+  createData(8, 'Correções de Bugs', 'Corrigir bugs encontrados durante os testes.', '2022-01-10', '2022-01-20', 'Planejada', 'Bruno Costa'),
+  createData(9, 'Documentação', 'Documentar o sistema, incluindo requisitos, arquitetura e guia do usuário.', '2022-01-11', '2022-01-18', 'Planejada', 'Juliana Rodrigues'),
+  createData(10, 'Treinamento da Equipe', 'Treinar a equipe de suporte para o lançamento do sistema.', '2022-01-12', '2022-01-19', 'Planejada', 'Gustavo Ferreira'),
+  createData(11, 'Deploy Final', 'Realizar o deploy final do sistema no ambiente de produção.', '2022-01-13', '2022-01-20', 'Planejada', 'Paula Mendes'),
+  createData(12, 'Revisão Pós-Deploy', 'Avaliar a implantação e desempenho do sistema após o deploy.', '2022-01-14', '2022-01-21', 'Planejada', 'Alexandre Rocha'),
 ];
+
 
 //Componente ListarTarefa
 const ListarTarefa = () => {
